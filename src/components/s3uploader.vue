@@ -41,9 +41,11 @@ export default {
 
       reader.onload = (e) => {
         console.log('length: ', e.target.result.includes('data:image/jpeg'))
-        /*if (!e.target.result.includes('data:image/jpeg')) {
-          return alert('Wrong file type - JPG only.')
-        }*/
+        if (!e.target.result.includes('data:image/jpeg')) {
+          if (!e.target.result.includes('data:image/png')){
+            return alert('Wrong file type - JPG & PNG only.')
+          }				
+        }
         if (e.target.result.length > MAX_IMAGE_SIZE) {
           return alert('Image is loo large - 1Mb maximum')
         }
