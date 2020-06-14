@@ -3,10 +3,10 @@
 
 const uuidv4 = require('uuid/v4')
 const AWS = require('aws-sdk')
-AWS.config.update({ region: process.env.REGION || 'us-east-1' })
+AWS.config.update({ region: process.env.REGION || 'ap-south-1' })
 const s3 = new AWS.S3();
 
-const uploadBucket = '<< ENTER YOUR BUCKET NAME HERE >>'   // << LOOK!
+const uploadBucket = 'serverlessrepo-serverless-s3-uploader-s3bucket-1pf5ikj8nbrgp'   // << LOOK!
 
 exports.handler = async (event) => {
   const result = await getUploadURL()

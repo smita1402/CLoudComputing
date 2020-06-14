@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>S3 Uploader Test</h1>
+    <h1>CC assignment Image</h1>
 
     <div v-if="!image">
       <h2>Select an image</h2>
@@ -62,7 +62,7 @@ export default {
       // Get the presigned URL
       const response = await axios({
         method: 'GET',
-        url: `https://k5y741pgj8.execute-api.us-east-2.amazonaws.com/beta`
+        url: `https://mbypycyvck.execute-api.ap-south-1.amazonaws.com/Prod/`
       })
 
       console.log('Response: ', response.data)
