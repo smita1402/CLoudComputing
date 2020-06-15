@@ -47,7 +47,7 @@ export default {
           }				
         }
         if (e.target.result.length > MAX_IMAGE_SIZE) {
-          return alert('Image is loo large - 100Mb maximum')
+          return alert('Video is too large - 100Mb maximum')
         }
 
         this.image = e.target.result
@@ -75,7 +75,7 @@ export default {
       for (var i = 0; i < binary.length; i++) {
         array.push(binary.charCodeAt(i))
       }
-      let blobData = new Blob([new Uint8Array(array)], {type: 'image/jpeg'})
+      let blobData = new Blob([new Uint8Array(array)], {type: 'video/mp4'})
       console.log('Uploading to: ', response.data.uploadURL)
 
       const result = await fetch(response.data.uploadURL, {
