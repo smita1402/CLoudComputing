@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img id="logo" src="https://s3.us-east-2.amazonaws.com/askjames/space-invader.jpg">
+    <img id="logo" src="https://assets.awwwards.com/awards/images/2015/07/simplicity-awwwards-logos.gif">
     <s3uploader/>
   </div>
 </template>
