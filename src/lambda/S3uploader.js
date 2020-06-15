@@ -20,8 +20,8 @@ const getUploadURL = async function() {
 
   var s3Params = {
     Bucket: uploadBucket,
-    Key:  `${actionId}.jpg`,
-    ContentType: 'image/jpeg',
+    Key:  `${actionId}.mp4`,
+    ContentType: 'video/mp4',
     CacheControl: 'max-age=31104000',
     ACL: 'public-read',
   };
@@ -37,7 +37,7 @@ const getUploadURL = async function() {
       },
       "body": JSON.stringify({
           "uploadURL": uploadURL,
-          "photoFilename": `${actionId}.jpg`
+          "photoFilename": `${actionId}.mp4`
       })
     })
   })
