@@ -1,17 +1,17 @@
 <template>
   <div class="hello">
-    <h1>CC assignment Image</h1>
+    <h1>CC Video Uploader</h1>
 
     <div v-if="!image">
-      <h2>Select an image</h2>
+      <h2>Select an Video</h2>
       <input type="file" @change="onFileChange">
     </div>
     <div v-else>
       <img :src="image" />
-      <button v-if="!uploadURL" @click="removeImage">Remove image</button>
-      <button v-if="!uploadURL" @click="uploadImage">Upload image</button>
+      <button v-if="!uploadURL" @click="removeImage">Remove Video</button>
+      <button v-if="!uploadURL" @click="uploadImage">Upload Video</button>
     </div>
-    <h2 v-if="uploadURL">Success! Image uploaded to:</h2>
+    <h2 v-if="uploadURL">Success! Video uploaded to:</h2>
     <a :href="uploadURL">{{ uploadURL }}</a>
   </div>
 </template>
@@ -19,7 +19,7 @@
 <script>
 
 import axios from 'axios'
-const MAX_IMAGE_SIZE = 1000000
+const MAX_IMAGE_SIZE = 1000000000
 
 export default {
   name: 's3uploader',
@@ -40,14 +40,14 @@ export default {
       let reader = new FileReader()
 
       reader.onload = (e) => {
-        console.log('length: ', e.target.result.includes('data:image/jpeg'))
-        if (!e.target.result.includes('data:image/jpeg')) {
-          if (!e.target.result.includes('data:image/png')){
-            return alert('Wrong file type - JPG & PNG only.')
+        console.log('length: ', e.target.result.includes('data:video/mp4'))
+        if (!e.target.result.includes('data:video/mp4')) {
+          if (!e.target.result.includes('data:video/avi')){
+            return alert('Wrong file type - MP4 & AVI only.')
           }				
         }
         if (e.target.result.length > MAX_IMAGE_SIZE) {
-          return alert('Image is loo large - 1Mb maximum')
+          return alert('Image is loo large - 100Mb maximum')
         }
 
         this.image = e.target.result
