@@ -13,6 +13,7 @@
     </div>
     <h2 v-if="uploadURL">Success! Video uploaded to:</h2>
     <a :href="uploadURL">{{ uploadURL }}</a>
+    <a href="https://v2-alpha.d3v123wpfzmfwj.amplifyapp.com/">Visit S3 Explorer!</a>
   </div>
 </template>
 
