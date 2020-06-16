@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img id="logo" src="https://assets.awwwards.com/awards/images/2015/07/simplicity-awwwards-logos.gif">
+    <img id="logo" src="https://cloud-computing-03121995.s3.ap-south-1.amazonaws.com/cloud-computing-logo-concept.jpg">
     <s3uploader/>
   </div>
 </template>
